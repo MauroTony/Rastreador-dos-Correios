@@ -4,8 +4,4 @@ Sistema que verifica o codigo no sistema dos correios e retorna o status daquele
 
 Dependencias:
 
-pip install requests
-pip install bs4
-pip install twilio
-pip install flask
-pip install schedule
+pip install requests bs4 twilio flask schedule
