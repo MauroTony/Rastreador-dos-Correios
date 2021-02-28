@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <center>
+        <header>
+            <h1>Rastreio dos Correios via SMS - Mauro Tony</h1>
+        </header>
+        <main>
+            <div>
+                <form method="get" action="/resultado">
+                    <input style="text-align:center; margin: 2px; padding: 4px" type="text" name="codigo" placeholder="Insira aqui o código de rastreio dos correios" size="31"  required><br>
+                    <input style="text-align:center; margin: 2px; padding: 4px" type="text" name="numero" placeholder="Insira aqui o numero do seu celular" size="24" required>
+                    <p style="font-size:11px; margin:2px; font-family:'Courier New'">O número precisa ser no formato +5582996177010</p><br><br>
+                    <input type="checkbox" id="um" name="ok" required>
+                    <label for="um">Aceito receber status via sms</label><br><br>
+                    <input style="text-align:center; padding: 6px" type="submit" value="Solicitar Status">
+                </form>
+            </div>
+        </main>
+    </center>
+{% endblock %}

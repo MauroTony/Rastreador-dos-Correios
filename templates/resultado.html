@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <center>
+        <main>
+            {% if cod_status != 0 %}
+                <h1>Status de Rastreio: {{codigo}}</h1>
+                <h2>Status enviado via SMS para o número {{numero}}</h2>
+                {% for _status in status %}
+                    <div>
+                        {% for texto in _status%}
+                            <p>{{texto}}</p>
+                        {% endfor %}
+                    </div>
+                    <hr>
+                {% endfor %}
+            {% else %}
+                <h1>Status de Rastreio: {{codigo}}</h1>
+                <div>
+                        <p>{{status}}</p>
+                </div>
+            {% endif %}
+        </main>
+    </center>
+{% endblock %}

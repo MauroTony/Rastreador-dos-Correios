@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <center>
+        <header>
+            <h1>Lista dos códigos de rastreios salvos - Mauro Tony</h1>
+        </header>
+        <main>
+            <hr>
+            {% for rastreio in select %}
+
+                <div>
+                    <p><strong>Codigo:</strong> {{rastreio[0]}}  <strong>Telefone:</strong> {{rastreio[1]}}  <strong>Ultimo Status:</strong> {{rastreio[2]}}</p>
+                    <form method="get" action="/lista">
+                        <input style="text-align:center; margin: 3px; padding: 6px" type="submit" name="visualizar" value="visualizar">
+                        <input style="text-align:center; margin: 3px; padding: 6px" type="submit" name="deletar" value="deletar">
+                    </form>
+                </div>
+            <hr>
+            {% endfor %}
+        </main>
+    </center>
+{% endblock %}
